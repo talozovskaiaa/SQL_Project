@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="app-deadline">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app-deadline.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BankLoginTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BankLoginTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/ru.netology.test.html">ru.netology.test</a> &gt; BankLoginTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8.185s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="shouldSuccessfulLogin()"></a>
+<h3 class="failures">Позитивный тест - успешный логин и верификация</h3>
+<span class="code">
+<pre>com.microsoft.playwright.PlaywrightException: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/stackTrace.js:50:17)
+    at LongStandingScope._race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:91:52)
+    at LongStandingScope.race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:84:17)
+    at FrameDispatcher._handleCommand (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:96:36)
+    at DispatcherConnection.dispatch (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator(&quot;[data-test-id=code] input&quot;) to be visible
+
+	at app//com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at app//com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at app//com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at app//com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at app//com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1060)
+	at app//com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$7(LocatorImpl.java:610)
+	at app//com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at app//com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at app//com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:610)
+	at app//com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:606)
+	at app//com.microsoft.playwright.Locator.waitFor(Locator.java:5198)
+	at app//ru.netology.page.VerificationPage.verifyVerificationPageVisibility(VerificationPage.java:22)
+	at app//ru.netology.test.BankLoginTest.shouldSuccessfulLogin(BankLoginTest.java:37)
+	at java.base@11.0.28/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base@11.0.28/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base@11.0.28/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
+  message='Target page, context or browser has been closed
+  name='TargetClosedError
+  stack='TargetClosedError:Target page, context or browser has been closed
+Error
+    at captureRawStack (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/stackTrace.js:50:17)
+    at LongStandingScope._race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:91:52)
+    at LongStandingScope.race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:84:17)
+    at FrameDispatcher._handleCommand (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:96:36)
+    at DispatcherConnection.dispatch (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:365:39)
+}
+Call log:
+- waiting for locator(&quot;[data-test-id=code] input&quot;) to be visible
+
+	at app//com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
+	at app//com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at app//com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 14 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Позитивный тест - успешный логин и верификация</td>
+<td class="failures">shouldSuccessfulLogin()</td>
+<td class="failures">8.185s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Connecting to: jdbc:mysql://localhost:3306/app?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC as user: app
+Connecting to: jdbc:mysql://localhost:3306/app?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC as user: app
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at 5 нояб. 2025 г., 15:21:43</p>
+</div>
+</div>
+</body>
+</html>
