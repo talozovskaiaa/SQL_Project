@@ -39,4 +39,40 @@ public class BankLoginTest extends TestBase {
         verificationPage.validVerify(verificationCode);
         verificationPage.verifySuccessLogin();
     }
+
+    @Test
+    @DisplayName("Негативный тест - корректный логин и невалидный пароль")
+    void shouldUnsuccessfulLogin() {
+        var authInfo = DataHelper.getAuthInfo();
+        var verificationPage = loginPage.validLogin(authInfo);
+        loginPage.invalidPassword(authInfo, "1234");
+        verificationPage.verifyErrorNotificationVisibility();
+    }
+
+    @Test
+    @DisplayName("Негативный тест - корректный пароль и невалидный логин")
+    void shouldUnsuccessfulPassword() {
+        var authInfo = DataHelper.getAuthInfo();
+        var verificationPage = loginPage.validLogin(authInfo);
+        loginPage.invalidLogin(authInfo, "test");
+        verificationPage.verifyErrorNotificationVisibility();
+    }
+
+    @Test
+    @DisplayName("Негативный тест - корректный логин и пустой пароль")
+    void shouldEmptyLogin() {
+        var authInfo = DataHelper.getAuthInfo();
+        var verificationPage = loginPage.validLogin(authInfo);
+        loginPage.invalidPassword(authInfo, "");
+        verificationPage.setEmptyField();
+    }
+
+    @Test
+    @DisplayName("Негативный тест - корректный пароль и пустой логин")
+    void shouldEmptyPassword() {
+        var authInfo = DataHelper.getAuthInfo();
+        var verificationPage = loginPage.validLogin(authInfo);
+        loginPage.invalidLogin(authInfo, "");
+        verificationPage.setEmptyField();
+    }
 }

@@ -23,4 +23,18 @@ public class LoginPage {
         continueButton.click();
         return new VerificationPage(page);
     }
+
+    public LoginPage invalidPassword(AuthInfo authInfo, String invalidPassword) {
+        loginField.fill(authInfo.getLogin());
+        passwordField.fill(invalidPassword);
+        continueButton.click();
+        return this;
+    }
+
+    public LoginPage invalidLogin(AuthInfo authInfo, String invalidLogin) {
+        loginField.fill(authInfo.getLogin());
+        passwordField.fill(invalidLogin);
+        continueButton.click();
+        return this;
+    }
 }

@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.test.BankLoginTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-11-05T08:21:34" hostname="MacBook-Pro-Tatana.local" time="8.185">
+<testsuite name="ru.netology.test.BankLoginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-06T17:49:52" hostname="MacBook-Pro-Tatana.local" time="2.774">
   <properties/>
-  <testcase name="Позитивный тест - успешный логин и верификация" classname="ru.netology.test.BankLoginTest" time="8.185">
-    <failure message="com.microsoft.playwright.PlaywrightException: Error {&#10;  message='Target page, context or browser has been closed&#10;  name='TargetClosedError&#10;  stack='TargetClosedError:Target page, context or browser has been closed&#10;Error&#10;    at captureRawStack (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/stackTrace.js:50:17)&#10;    at LongStandingScope._race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:91:52)&#10;    at LongStandingScope.race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:84:17)&#10;    at FrameDispatcher._handleCommand (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:96:36)&#10;    at DispatcherConnection.dispatch (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:365:39)&#10;}&#10;Call log:&#10;- waiting for locator(&quot;[data-test-id=code] input&quot;) to be visible&#10;" type="com.microsoft.playwright.PlaywrightException">com.microsoft.playwright.PlaywrightException: Error {
-  message='Target page, context or browser has been closed
-  name='TargetClosedError
-  stack='TargetClosedError:Target page, context or browser has been closed
-Error
-    at captureRawStack (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/stackTrace.js:50:17)
-    at LongStandingScope._race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:91:52)
-    at LongStandingScope.race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:84:17)
-    at FrameDispatcher._handleCommand (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:96:36)
-    at DispatcherConnection.dispatch (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:365:39)
-}
-Call log:
-- waiting for locator(&quot;[data-test-id=code] input&quot;) to be visible
-
-	at app//com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
-	at app//com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
-	at app//com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at app//com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
-	at app//com.microsoft.playwright.impl.FrameImpl.waitForSelectorImpl(FrameImpl.java:1060)
-	at app//com.microsoft.playwright.impl.LocatorImpl.lambda$waitForImpl$7(LocatorImpl.java:610)
-	at app//com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at app//com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
-	at app//com.microsoft.playwright.impl.LocatorImpl.waitForImpl(LocatorImpl.java:610)
-	at app//com.microsoft.playwright.impl.LocatorImpl.waitFor(LocatorImpl.java:606)
-	at app//com.microsoft.playwright.Locator.waitFor(Locator.java:5198)
-	at app//ru.netology.page.VerificationPage.verifyVerificationPageVisibility(VerificationPage.java:22)
-	at app//ru.netology.test.BankLoginTest.shouldSuccessfulLogin(BankLoginTest.java:37)
-	at java.base@11.0.28/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.base@11.0.28/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at java.base@11.0.28/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: com.microsoft.playwright.impl.TargetClosedError: Error {
-  message='Target page, context or browser has been closed
-  name='TargetClosedError
-  stack='TargetClosedError:Target page, context or browser has been closed
-Error
-    at captureRawStack (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/stackTrace.js:50:17)
-    at LongStandingScope._race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:91:52)
-    at LongStandingScope.race (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/utils/manualPromise.js:84:17)
-    at FrameDispatcher._handleCommand (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:96:36)
-    at DispatcherConnection.dispatch (/private/var/folders/9d/fb714pd15_b7j9vvqls7xnk80000gn/T/playwright-java-6844566327017032693/package/lib/server/dispatchers/dispatcher.js:365:39)
-}
-Call log:
-- waiting for locator(&quot;[data-test-id=code] input&quot;) to be visible
-
-	at app//com.microsoft.playwright.impl.Connection.dispatch(Connection.java:256)
-	at app//com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at app//com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
-	... 14 more
-</failure>
-  </testcase>
+  <testcase name="Негативный тест - корректный пароль и пустой логин" classname="ru.netology.test.BankLoginTest" time="2.774"/>
   <system-out><![CDATA[Connecting to: jdbc:mysql://localhost:3306/app?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC as user: app
 Connecting to: jdbc:mysql://localhost:3306/app?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC as user: app
 ]]></system-out>
