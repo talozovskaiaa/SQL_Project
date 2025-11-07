@@ -1,5 +1,6 @@
 package ru.netology.data;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import lombok.SneakyThrows;
 import lombok.Value;
 import org.apache.commons.dbutils.QueryRunner;
@@ -8,6 +9,8 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import static java.lang.System.getenv;
 
 public class SQLHelper {
 
@@ -64,11 +67,12 @@ public class SQLHelper {
     }
 
     private static Connection getConn() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/app?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
-        String user = "app";
-        String password = "pass";
+        Dotenv dotenv = Dotenv.load();
 
-        System.out.println("Connecting to: " + url + " as user: " + user);
+        String url = dotenv.get("DB_URL");
+        String user = dotenv.get("DB_USER");
+        String password = dotenv.get("DB_PASSWORD");
+
         return DriverManager.getConnection(url, user, password);
     }
 }

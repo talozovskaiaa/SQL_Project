@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.test.BankLoginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-06T17:49:52" hostname="MacBook-Pro-Tatana.local" time="2.774">
+<testsuite name="ru.netology.test.BankLoginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-07T15:23:52" hostname="MacBook-Pro-Tatana.local" time="2.078">
   <properties/>
-  <testcase name="Негативный тест - корректный пароль и пустой логин" classname="ru.netology.test.BankLoginTest" time="2.774"/>
-  <system-out><![CDATA[Connecting to: jdbc:mysql://localhost:3306/app?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC as user: app
-Connecting to: jdbc:mysql://localhost:3306/app?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC as user: app
-]]></system-out>
+  <testcase name="Негативный тест - корректный пароль и пустой логин" classname="ru.netology.test.BankLoginTest" time="2.078"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
